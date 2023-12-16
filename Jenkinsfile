@@ -5,8 +5,9 @@ pipeline {
             steps {
                 sh "echo Installing JSlist"
                 sh "npm i jslint"
+                sh "echo starting lintchecks"
                 sh "node_modules/jslint/bin/jslint.js server.js || true"
-                sh "lint completed"
+                sh "echo linkchecks completed"
             }
         }
     }

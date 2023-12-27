@@ -1,7 +1,7 @@
 pipeline {
     agent any 
     stages {
-        stage('Lint Checks') {
+        stage('Lint Checks')  {
             steps {
                 sh "echo Installing JSlist"
                 sh "npm i jslint"

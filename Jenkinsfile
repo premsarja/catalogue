@@ -1,4 +1,4 @@
 //
 @Library('roboshop@main') _
-env.COMPONENT="cart"
+env.COMPONENT="catalogue"
 nodejs()

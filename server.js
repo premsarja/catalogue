@@ -151,7 +151,7 @@ function mongoConnect() {
     var mongoURL = process.env.MONGO_URL || 'mongodb://roboshop:Password123@roboshop-dev-docdb.cluster-cf6ic4gs8isj.us-east-1.docdb.amazonaws.com:27017:27017/catalogue?tls=true&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false';
     var client = mongoClient.connect(mongoURL,
       {
-        tlsCAFile: `/home/roboshop/global-bundle.pem` //Specify the DocDB; cert to be used, ensure it has to present on server
+        tlsCAFile: `/home/roboshop/catalogue/global-bundle.pem` //Specify the DocDB; cert to be used, ensure it has to present on server
     }, (error, client) => {
     if(error) {
         reject(error);

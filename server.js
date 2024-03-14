@@ -1,4 +1,4 @@
-mongoClient = require('mongodb').MongoClient;
+const mongoClient = require('mongodb').MongoClient;
 const mongoObjectID = require('mongodb').ObjectID;
 const bodyParser = require('body-parser');
 const express = require('express');
@@ -182,4 +182,3 @@ const port = process.env.CATALOGUE_SERVER_PORT || '8080';
 app.listen(port, () => {
     logger.info('Started on port', port);
 });
-

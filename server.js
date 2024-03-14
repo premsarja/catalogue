@@ -148,7 +148,7 @@ app.get('/search/:text', (req, res) => {
 // Code for Document DB, 
 function mongoConnect() {
     return new Promise((resolve, reject) => {
-    var mongoURL = process.env.MONGO_URL || 'mongodb://prem:premsagar@mongodb:27017/catalogue?tls=true&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false';
+    var mongoURL = process.env.MONGO_URL || 'mongodb://prem:premsagar@roboshop-dev-docdb.cluster-cf6ic4gs8isj.us-east-1.docdb.amazonaws.com:27017/?tls=true&tlsCAFile=global-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false';
     var client = mongoClient.connect(mongoURL,
       {
         tlsCAFile: `/home/roboshop/global-bundle.pem` //Specify the DocDB; cert to be used, ensure it has to present on server
